@@ -30,7 +30,7 @@ func (s *Supervisor) exit(t *ExitTask) error {
 		"status":    status,
 		"id":        proc.Container().ID(),
 		"systemPid": proc.SystemPid(),
-	}).Debug("containerd: process exited")
+	}).Debug("containerd: container process exited")
 
 	// if the process is the the init process of the container then
 	// fire a separate event for this process
